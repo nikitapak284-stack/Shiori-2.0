@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff4f2">
+<title>Свидание для Саши 💗</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+<section class="screen active" data-screen="0">
+  <div class="hero-wrap"><img class="hero-art" src="cats.svg" alt="Два милых котёнка"><span class="float-heart h1">💗</span><span class="float-heart h2">💕</span><span class="float-heart h3">✨</span></div>
+  <div class="badge">💗 ЛИЧНО ДЛЯ САШИ 💗</div>
+  <div class="question"><h1>Саша, пойдёшь со мной на свидание?</h1><p class="subtitle">от Никиты</p></div>
+  <div class="button-zone" id="buttonZone"><button class="big-btn yes" id="yesBtn" type="button">Да 💕</button><button class="big-btn no" id="noBtn" type="button">Нет</button></div>
+  <div class="hint">кнопка «нет» немного стесняется 😼</div>
+</section>
+
+<section class="screen" data-screen="1">
+  <div class="progress"><i class="dot on"></i><i class="dot"></i><i class="dot"></i><i class="dot"></i></div>
+  <div class="hero-wrap small"><img class="hero-art" src="cats.svg" alt="Два милых котёнка"></div>
+  <h1>Как проведём свидание?</h1><p class="subtitle">выбирай очень ответственно</p>
+  <div class="option-list">
+    <button class="option date-option" data-choice="уютный вечер" type="button"><span class="mini"><img src="cats.svg" alt="Котята"><b class="prop">🛋️</b></span><strong>уютный вечер</strong><span class="arrow">›</span></button>
+    <button class="option date-option" data-choice="просмотр кино" type="button"><span class="mini"><img src="cats.svg" alt="Котята"><b class="prop">🍿</b></span><strong>просмотр кино</strong><span class="arrow">›</span></button>
+    <button class="option date-option" data-choice="интимный вечер" type="button"><span class="mini"><img src="cats.svg" alt="Котята"><b class="prop">🙈</b></span><strong>интимный вечер</strong><span class="arrow">›</span></button>
+    <button class="option date-option" data-choice="всё вместе" type="button"><span class="mini"><img src="cats.svg" alt="Котята"><b class="prop">✨</b></span><strong>всё вместе</strong><span class="arrow">›</span></button>
+  </div>
+</section>
+
+<section class="screen" data-screen="2">
+  <div class="progress"><i class="dot"></i><i class="dot on"></i><i class="dot"></i><i class="dot"></i></div>
+  <div class="hero-wrap small"><img class="hero-art" src="cats.svg" alt="Два милых котёнка"></div>
+  <h1>Что покушаем?</h1><p class="subtitle">можно мечтать сколько угодно</p>
+  <div class="food-grid"><button class="food">🍕 пицца</button><button class="food">🍣 суши</button><button class="food">🍔 бургеры</button><button class="food">🍝 паста</button><button class="food">🥟 домашняя еда</button><button class="food">🍰 сладкое</button><button class="food">🌮 что-нибудь новое</button><button class="food">🤷 всё равно</button></div>
+</section>
+
+<section class="screen" data-screen="3">
+  <div class="progress"><i class="dot"></i><i class="dot"></i><i class="dot on"></i><i class="dot"></i></div>
+  <div class="hero-wrap small"><img class="hero-art" src="cats.svg" alt="Два милых котёнка"></div>
+  <h1>Выбери дату и время</h1><p class="subtitle">весь этот месяц и любое время</p>
+  <div class="calendar"><div class="month" id="monthTitle"></div><div class="week"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span></div><div class="days" id="days"></div></div>
+  <div class="time-box"><label for="time">Любое время:</label><input class="time-input" id="time" type="time" step="60"></div>
+  <button class="continue" id="dateContinue" type="button" disabled>Готово 💗</button>
+</section>
+
+<section class="screen final" data-screen="4">
+  <div class="progress"><i class="dot"></i><i class="dot"></i><i class="dot"></i><i class="dot on"></i></div>
+  <div class="hero-wrap"><img class="hero-art" src="cats.svg" alt="Два милых котёнка"><span class="float-heart h1">💗</span><span class="float-heart h2">💕</span></div>
+  <div class="final-card"><h1>спасибо за обращение</h1><div class="final-text">люблю тебя котенок,<br>скоро вернусь и все будет</div><span class="tag">До скорой встречи 💗</span><div class="summary" id="summary"></div></div>
+  <button class="restart" id="restart" type="button">пройти ещё раз</button>
+</section>
+</main>
+
+<div class="modal" id="foodModal" role="dialog" aria-modal="true"><div class="modal-card"><img class="modal-art" src="cats.svg" alt="Котята"><p>ага, че захотел.<br>пиво с домашней едой будет</p><button id="foodOk" type="button">ну ладно 😹</button></div></div>
+<div class="modal" id="timeModal" role="dialog" aria-modal="true"><div class="modal-card"><img class="modal-art" src="stern.svg" alt="Решительный котёнок"><h2>сам решу,<br>сам решууу</h2><button id="timeOk" type="button">ладно, решай</button></div></div>
+<noscript><div style="position:fixed;inset:0;z-index:999;background:#fff8f3;padding:30px;text-align:center;font:700 20px/1.4 sans-serif">Для сайта нужен JavaScript. Открой ссылку в Safari.</div></noscript>
+<script src="app.js"></script>
+</body></html>
