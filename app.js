@@ -1,4 +1,5 @@
 (()=>{'use strict';
+if(window.CAT_ART){document.querySelectorAll('img[src="cats.svg"]').forEach(img=>{img.src=window.CAT_ART;img.dataset.originalCats='true'})}
 const screens=[...document.querySelectorAll('.screen')],$=id=>document.getElementById(id),state={kind:'',food:'',day:0,time:'',year:0,month:0};
 const show=n=>{screens.forEach((s,i)=>s.classList.toggle('active',i===n));scrollTo(0,0)};
 function hearts(n=20){const a=['💗','💕','💖','♥️','✨'];for(let i=0;i<n;i++){const e=document.createElement('span');e.className='heart';e.textContent=a[Math.floor(Math.random()*a.length)];e.style.left=(8+Math.random()*84)+'vw';e.style.top=(58+Math.random()*28)+'vh';e.style.setProperty('--x',(Math.random()*180-90)+'px');e.style.animationDelay=(Math.random()*.2)+'s';document.body.append(e);setTimeout(()=>e.remove(),1700)}}
